@@ -9,6 +9,7 @@ public class PrzelicznikTekstu {
         PrintWriter printWriter = response.getWriter();
         String tekst = request.getParameter("tekst");
 
+        printWriter.println(tekst);
         obliczZnaki(printWriter, tekst);
         obliczBezSpacji(printWriter, tekst);
         obliczWyrazy(printWriter,tekst);
