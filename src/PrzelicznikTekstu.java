@@ -30,11 +30,13 @@ public class PrzelicznikTekstu {
         writer.println("ilosc wyrazow: " + wyrazy.length);
     }
     public static void sprawdzPalindrom(PrintWriter writer, String tekst) {
-        StringBuilder builder=new StringBuilder();
-        String reversed=builder.reverse().toString();
-        if(reversed.equals(tekst)){
+        StringBuilder builder = new StringBuilder(tekst);
+
+        String reversed = builder.reverse().toString();
+        if (tekst.equals(reversed)) {
             writer.println("tekst jest palindromem");
-        }else
+        } else {
             writer.println("tekst nie jest palindromem");
+        }
     }
 }
